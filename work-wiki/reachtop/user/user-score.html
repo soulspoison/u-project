@@ -1,0 +1,113 @@
+<!--
+	作者：Perfly
+	时间：2017-10-24
+	描述：
+-->	
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ReachTop</title>
+		<link rel="stylesheet" type="text/css" href="../css/index.css">
+      <link rel="stylesheet" type="text/css" href="../css/user.css">
+      <link rel="stylesheet" href="../css/score-main.css" type="text/css" media="all">
+      <link href="../css/sortTable.css" rel="stylesheet" type="text/css" />
+      <script type="text/javascript" src="../js/table/mootools.js"></script>
+      <script type="text/javascript" src="../js/table/sortTable.js"></script>
+	</head>
+   <body>
+		<header>
+			<div>
+				<span>睿途</span>
+				<a href="../index.html">首页</a>
+		</div>
+			<div>
+				<span class="message" onclick="leave();">消息</span>
+				<span class="user" onmouseover="xs();">用户</span>	
+			</div>
+		</header>
+		<article id="xs" class="article1" style="display: none;" onmouseleave="xc();">
+			<ul>
+				<li><a href="../user.html">个人中心</a></li>
+				<li><a href="../login.html">退出登录</a></li>
+			</ul>
+		</article>
+      <div class="score-content">
+         <div id="container">
+            <div id="example">
+               <div class="tableFilter">
+                  <form id="tableFilter" onsubmit="myTable.filter(this.id); return false;">科目选择: 
+                     <select id="column" hidden>
+                        <option value="0">Firstname</option>
+                     </select>
+                     <select id="keyword">
+                        <option value="TOFEL">TOFEL</option>
+                        <option value="SAT">SAT</option>
+                     </select>
+                     <input type="submit" value="确认" />
+                     <input type="reset" value="重置" />
+                  </form>
+               </div>
+               <table id="myTable" cellpadding="0" cellpadding="0">
+                  <thead>
+                     <th axis="string">科目</th>
+                     <th axis="string">分数</th>
+                     <th axis="date">日期</th>
+                     <th>附件</th>
+                  </thead>
+                  <tbody>
+                     <tr id="1">
+                        <td>TOFEL</td>
+                        <td>80</td>
+                        <td>2017.10.10</td>
+                        <td class="open-img-01" onclick="o();">查看附件</td>
+                     </tr> 
+                     <tr id="2">
+                        <td>SAT</td>
+                        <td>1300</td>
+                        <td>2017.10.08</td>
+                        <td>查看附件</td>
+                     </tr>
+                  </tbody>
+               </table>
+               <script type="text/javascript">
+                  
+               </script>
+            </div>
+         </div>
+      </div>
+      <div class="score-pic" id="sp" style="display: none;">
+         <div class="pic-content pic-content-01">
+            <span class="pic-close" onclick="c();">×</span>
+            <div>成绩图预览</div>
+            <div class="score-img"><img src="pic/image_01.jpg"></div>
+         </div>      
+      </div>
+   </body>
+   <script type="text/javascript">
+      var myTable = {};
+      var p = document.getElementById('score-pic');
+      window.addEvent('domready', function(){
+         myTable = new sortableTable('myTable', {overCls: false});
+      });
+
+      var x = document.getElementById('xs');
+      function xs() {
+         x.style.display = '';
+      }
+      function xc() {
+         x.style.display = 'none';
+      }
+      
+      var sp = document.getElementById('sp');
+      function o() {
+         sp.style.display = '';
+      }
+      function c() {
+         sp.style.display = 'none'; 
+      }
+      function leave() {
+         window.location.href = '../message.html';
+      }
+   </script>
+</html>

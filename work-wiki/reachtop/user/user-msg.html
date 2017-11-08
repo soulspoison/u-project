@@ -1,0 +1,111 @@
+<!--
+	作者：Perfly
+	时间：2017-10-24
+	描述：
+-->	
+<!DOCTYPE html>
+<html style="height: 100%">
+	<head>
+		<meta charset="utf-8">
+		<title>ReachTop</title>
+		<link rel="stylesheet" type="text/css" href="../css/index.css">
+      <link rel="stylesheet" type="text/css" href="../css/user.css">
+		<script type="text/javascript" src="../js/jquery/jquery-2.1.4.min.js"></script>
+	</head>
+    <body style="height: 100%; margin: 0">
+   		<header>
+   			<div>
+   				<span>睿途</span>
+   				<a href="../index.html">首页</a>
+			</div>
+   			<div>
+   				<span class="message">消息</span>
+   				<span class="user">用户</span>	
+   			</div>
+   		</header>
+   		<article class="article">
+   			<ul>
+   				<li><a href="../user.html">个人中心</a></li>
+   				<li><a href="../login.html">退出登录</a></li>
+   			</ul>
+   		</article>
+         <div class="pic-clip">
+            <div class="clip-content">
+               <span class="clip-close">×</span>
+               <label for="file">点击上传头像</label>
+               <input type="file" id="file" hidden>
+               <div id="clipArea"></div>
+               <button id="clipBtn">上传</button>
+               <button class="closeBtn">取消</button>
+            </div>
+         </div>
+         <div id="msg-content">
+            <div id="msg-pic">
+               <div id="view"></div>
+               <div id="msg-open">点击更换头像</div>
+            </div>
+            <div id="msg-user">
+               <div>姓名：测试用户</div>
+               <div>年纪：测试年纪</div>
+               <div>学校：测试学校</div>
+            </div>
+            <div id="msg-scroe">
+               <div>GPA：100</div>
+               <div>托福：100</div>
+               <div>SAT：100</div>
+               <div>ACT：100</div>
+            </div>
+            <div id="msg-hobby">
+               <div>社团：测试社团</div>
+               <div>志愿：测试志愿</div>
+               <div>爱好：测试爱好</div>
+            </div>
+            <div id="msg-hobby">
+               <div>个人留言：测试留言</div>
+            </div>
+         </div>
+         <script type="text/javascript">
+            $(document).ready(function() {
+               $('.user').mouseenter(function() {
+                  $('.article').stop(false, true).slideDown(300);
+               })
+               $('.article').mouseleave(function() {
+                  $('.article').stop(false, true).delay(500).slideUp(300);
+               })
+               $('#msg-open').click(function() {
+                  $('.pic-clip').show();
+               })
+               $('.clip-close, .closeBtn').click(function() {
+                  $('.pic-clip').hide();
+               })
+               $('.message').click(function() {
+                  window.location.href = '../message.html';
+               })
+            })
+         </script>
+         <script src="../js/photoClip/iscroll-zoom.js"></script>
+         <script src="../js/photoClip/hammer.js"></script>
+         <script src="../js/photoClip/lrz.all.bundle.js"></script>
+         <script src="../js/photoClip/jquery.photoClip.js"></script>
+         <script type="text/javascript">
+            //clip
+            var clipArea = new bjj.PhotoClip("#clipArea", {
+               size: [260, 260],
+               outputSize: [640, 640],
+               file: "#file",
+               view: "#view",
+               ok: "#clipBtn",
+               loadStart: function() {
+                  console.log("照片读取中");
+               },
+               loadComplete: function() {
+                  console.log("照片读取完成");
+               },
+               clipFinish: function(dataURL) {
+                  $('.pic-clip').hide();
+                  alert('上传成功!');
+               }
+            });
+         </script>
+   </body>
+</html>

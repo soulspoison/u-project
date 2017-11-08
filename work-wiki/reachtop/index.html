@@ -1,0 +1,57 @@
+<!--
+	作者：Perfly
+	时间：2017-10-24
+	描述：
+-->	
+<!DOCTYPE html>
+<html style="height: 100%">
+	<head>
+		<meta charset="utf-8">
+		<title>ReachTop</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<script type="text/javascript" src="js/jquery/jquery-2.1.4.min.js"></script>
+	</head>
+    <body style="height: 100%; margin: 0">
+   		<header>
+   			<div>
+   				<span>睿途</span>
+   				<a href="#">首页</a>
+			</div>
+   			<div>
+   				<span class="message">消息</span>
+   				<span class="user">用户</span>	
+   			</div>
+   		</header>
+   		<article class="article">
+   			<ul>
+   				<li><a href="user.html">个人中心</a></li>
+   				<li><a href="login.html">退出登录</a></li>
+   			</ul>
+   		</article>
+   		<aside>
+   			<ul>
+   				<li><a href="list/note-list.html">√ 日记</a></li>
+   				<li><a href="list/ftf-list.html">● 校内面谈</a></li>
+   				<li><a href="list/ftf-list.html">◎ 国外面谈</a></li>
+   				<li><a href="list/order-list.html">★ 校内面谈预约记录</a></li>
+   				<li><a href="list/order-list.html">☆ 国外面谈预约记录</a></li>
+   			</ul>
+   		</aside>
+        <div id="container" style="height: 100%"></div>
+        <script type="text/javascript" src="js/echarts/echarts.min.js"></script>
+        <script type="text/javascript" src="js/content.js"></script>
+        <script type="text/javascript">
+        	$(document).ready(function() {
+        		$('.user').mouseenter(function() {
+        			$('.article').stop(false, true).slideDown(300);
+        		})
+        		$('.article').mouseleave(function() {
+        			$('.article').stop(false, true).delay(500).slideUp(300);
+        		})
+        		$('.message').click(function() {
+        			window.location.href = 'message.html';
+        		})
+        	})
+       </script>
+   </body>
+</html>

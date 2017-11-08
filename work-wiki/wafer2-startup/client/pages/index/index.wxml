@@ -1,0 +1,4 @@
+<!--index.wxml-->
+  <view class="usermotto">
+    <navigator url="../record/index">录一个</navigator>
+  </view>

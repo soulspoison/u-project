@@ -1,0 +1,76 @@
+<!--
+	作者：Perfly
+	时间：2017-10-24
+	描述：
+-->	
+<!DOCTYPE html>
+<html style="height: 100%">
+	<head>
+		<meta charset="utf-8">
+		<title>ReachTop</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+      <link rel="stylesheet" type="text/css" href="css/user.css">
+		<script type="text/javascript" src="js/jquery/jquery-2.1.4.min.js"></script>
+	</head>
+    <body style="height: 100%; margin: 0">
+   		<header>
+   			<div>
+   				<span>睿途</span>
+   				<a href="index.html">首页</a>
+			</div>
+   			<div>
+   				<span class="message">消息</span>
+   				<span class="user">用户</span>
+   			</div>
+   		</header>
+   		<article class="article">
+   			<ul>
+   				<li><a href="#">个人中心</a></li>
+   				<li><a href="login.html">退出登录</a></li>
+   			</ul>
+   		</article>
+         <div id="user-content">
+            <div>
+               <div id="user-msg">
+                  <h3>个人信息</h3>
+               </div>
+               <div id="user-score">
+                  <h3>成绩信息</h3>
+               </div>
+            </div>
+            <div>
+               <div id="user-apply">
+                  <h3>申请表</h3>
+               </div>
+               <div id="user-photo">
+                  <h3>照片墙</h3>
+               </div>
+            </div>    
+         </div>
+         <script type="text/javascript">
+            $(document).ready(function() {
+               $('.user').mouseenter(function() {
+                  $('.article').stop(false, true).slideDown(300);
+               })
+               $('.article').mouseleave(function() {
+                  $('.article').stop(false, true).delay(500).slideUp(300);
+               })
+               $('#user-msg').click(function() {
+                  window.location.href = 'user/user-msg.html';
+               })
+               $('#user-score').click(function() {
+                  window.location.href = 'user/user-score.html';
+               })
+               $('#user-apply').click(function() {
+                  window.location.href = 'user/user-apply.html';
+               })
+               $('#user-photo').click(function() {
+                  window.location.href = 'user/user-photo.html';
+               })
+               $('.message').click(function() {
+                  window.location.href = 'message.html';
+               })
+            })
+         </script>
+   </body>
+</html>

@@ -1,0 +1,47 @@
+<!--index.wxml-->
+<view class="list-content">
+  <view class="top-place">/</view>
+  <scroll-view scroll-y class="list-word">
+    <view class="list-content-word">
+      <input placeholder="输入收信人" />
+      <view class="play" hidden="{{recordok}}" data-key="{{filePath}}" bindtap="playSound">10''</view>
+      <text>Giving up or loss of the old self is an integral part of the process of mental and spiritual growth; depression is a normal and basically healthy phenomenon. Many people are either unwilling or unable to suffer the pain of giving up the outgrown which needs to be forsaken.</text>
+      <text class="list-title">选自：《少有人走的路》</text>
+      <view class="letter-msg">
+        <input placeholder="署名" />
+        <text>2017.10.31</text>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="top-place">/</view>
+  <view class="record" bindtap="beginrecord" hidden="{{beginshow}}">
+    <view class="link-pic">
+      <image class="link-pic-icon" mode="widthFix" src="../../images/record.png" />
+    </view>
+    <view class="link-text">
+      开始录音
+    </view>
+  </view>
+  <view class="recording" hidden="{{beginingshow}}">
+    <view class="sound-gif">
+      <image class="link-pic-icon" mode="widthFix" src="../../images/sound.gif" />
+    </view>
+    <view class="link-text" bindtap="finishrecord">
+      完成
+    </view>
+  </view>
+  <view class="recordok" hidden="{{recordok}}">
+    <view class="link-pic" bindtap="resetrecord">
+      <image class="link-pic-icon" mode="widthFix" src="../../images/reset.png" />
+      <view class="link-text">
+        重录
+      </view>
+    </view>
+    <view class="link-pic">
+      <image class="link-pic-icon" mode="widthFix" src="../../images/send.png" />
+      <view class="link-text">
+        发送
+      </view>
+    </view>
+  </view>
+</view>

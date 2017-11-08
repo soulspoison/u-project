@@ -1,0 +1,75 @@
+<!--
+	作者：Perfly
+	时间：2017-10-24
+	描述：
+-->	
+<!DOCTYPE html>
+<html style="height: 100%">
+	<head>
+		<meta charset="utf-8">
+		<title>ReachTop</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/message.css">
+		<script type="text/javascript" src="js/jquery/jquery-2.1.4.min.js"></script>
+	</head>
+    <body style="height: 100%; margin: 0">
+   		<header>
+   			<div>
+   				<span>睿途</span>
+   				<a href="index.html">首页</a>
+			</div>
+   			<div>
+   				<span>消息</span>
+   				<span class="user">用户</span>	
+   			</div>
+   		</header>
+   		<article class="article">
+   			<ul>
+   				<li><a href="user.html">个人中心</a></li>
+   				<li><a href="login.html">退出登录</a></li>
+   			</ul>
+   		</article>
+      <div id="message-content">
+        <div id="message-list">
+          <div class="message-header">
+            <div class="message-title">
+            你的老师评论了你的日记
+            </div>
+            <div class="message-date">
+              2017/10/20
+            </div>
+          </div>
+          <div class="message-comment">测试评论内容</div>
+          <div class="message-link">
+            <a href='list/content.html'>点此查看》</a>
+          </div>
+        </div>
+        <div id="message-list">
+          <div class="message-header">
+            <div class="message-title">
+            你的老师上传了你的面谈记录
+            </div>
+            <div class="message-date">
+              2017/10/18
+            </div>
+          </div>
+          <div class="message-comment">测试记录内容</div>
+          <div class="message-link">
+            <a href='list/content.html'>点此查看》</a>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript" src="js/echarts/echarts.min.js"></script>
+      <script type="text/javascript" src="js/content.js"></script>
+      <script type="text/javascript">
+      	$(document).ready(function() {
+      		$('.user').mouseenter(function() {
+      			$('.article').stop(false, true).slideDown(300);
+      		})
+      		$('.article').mouseleave(function() {
+      			$('.article').stop(false, true).delay(500).slideUp(300);
+      		})
+      	})
+     </script>
+   </body>
+</html>

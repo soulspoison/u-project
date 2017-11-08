@@ -1,0 +1,18 @@
+
+<view class="list-content">
+  <view class="top-place">/</view>
+  <navigator class="list-word" url="../record/index">
+    <view class="list-content-word">
+      <text>Giving up or loss of the old self is an integral part of the process of mental and spiritual growth; depression is a normal and basically healthy phenomenon. Many people are either unwilling or unable to suffer the pain of giving up the outgrown which needs to be forsaken.</text>
+      <text class="list-title">选自：《少有人走的路》</text>
+    </view>
+  </navigator>
+  <navigator class="link" url="../record/index">
+    <view class="link-pic">
+      <image class="link-pic-icon" mode="widthFix" src="../../images/record.png" />
+    </view>
+    <view class="link-text">
+      读这首诗给好友
+    </view>
+  </navigator>
+</view>

@@ -1,0 +1,21 @@
+#message-content{
+	width: 60%;
+	height: auto;
+	margin: 64px 0 0 20%;
+}
+#message-list{
+	border: 1px solid #888;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+.message-header{
+	margin: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+.message-comment, .message-link{
+	margin: 10px;
+}
+.message-link>a{
+	text-decoration: none;
+}

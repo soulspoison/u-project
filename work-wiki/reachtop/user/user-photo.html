@@ -1,0 +1,83 @@
+<!--
+	作者：Perfly
+	时间：2017-10-24
+	描述：
+-->	
+<!DOCTYPE html>
+<html style="height: 100%">
+	<head>
+		<meta charset="utf-8">
+		<title>ReachTop</title>
+		<link rel="stylesheet" type="text/css" href="../css/index.css">
+      <link rel="stylesheet" type="text/css" href="../css/user.css">
+      <link rel="stylesheet" type="text/css" href="../css/nanogallery.css">
+		<script type="text/javascript" src="../js/jquery/jquery-2.1.4.min.js"></script>
+      <script type="text/javascript" src="../js/nanogallery/nanogallery.min.js"></script>
+      <script>
+         $(document).ready(function () {
+            $(".nanoGallery2").nanoGallery({
+               thumbnailWidth:160,
+               thumbnailHeight:160,
+               itemsBaseURL:'pic',
+               displayCaption:true,    
+               thumbnailHoverEffect:[{'name':'borderLighter','duration':300},{'name':'labelAppear'}],
+               colorScheme:'Darker',
+               viewerDisplayLogo:true
+            });      
+         });
+      </script>
+	</head>
+   <body style="height: 100%; margin: 0">
+		<header>
+			<div>
+				<span>睿途</span>
+				<a href="../index.html">首页</a>
+		</div>
+			<div>
+				<span class="message">消息</span>
+				<span class="user">用户</span>	
+			</div>
+		</header>
+		<article class="article">
+			<ul>
+				<li><a href="../user.html">个人中心</a></li>
+				<li><a href="../login.html">退出登录</a></li>
+			</ul>
+		</article>
+      <div class="apply-content">
+         <div class="apply-group">
+            <div class="apply-time">2017.10</div>
+            <div class="apply-pic">
+               <div class="nanoGallery2">
+                  <a href="image_01.jpg" data-ngthumb="image_01ts.jpg" data-ngdesc="Lorem tempor arcu.">Thailand</a>
+                  <a href="image_02.jpg" data-ngthumb="image_02ts.jpg" data-ngdesc="Lorem ipsum .">Vietnam</a>
+                  <a href="image_03.jpg" data-ngthumb="image_03ts.jpg" data-ngdesc="">India</a>
+               </div>
+            </div>
+         </div>
+         <div class="apply-group">
+            <div class="apply-time">2017.9</div>
+            <div class="apply-pic">
+               <div class="nanoGallery2">
+                  <a href="image_01.jpg" data-ngthumb="image_01ts.jpg" data-ngdesc="Lorem tempor arcu.">Thailand</a>
+                  <a href="image_02.jpg" data-ngthumb="image_02ts.jpg" data-ngdesc="Lorem ipsum .">Vietnam</a>
+                  <a href="image_03.jpg" data-ngthumb="image_03ts.jpg" data-ngdesc="">India</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script type="text/javascript">
+         $(document).ready(function() {
+            $('.user').mouseenter(function() {
+               $('.article').stop(false, true).slideDown(300);
+            })
+            $('.article').mouseleave(function() {
+               $('.article').stop(false, true).delay(500).slideUp(300);
+            })
+            $('.message').click(function() {
+               window.location.href = '../message.html';
+            })
+         })
+      </script>
+   </body>
+</html>

@@ -1,0 +1,31 @@
+<!--
+	作者：Perfly
+	时间：2017-10-24
+	描述：
+-->	
+<!DOCTYPE html>
+<html style="height: 100%">
+	<head>
+		<meta charset="utf-8">
+		<title>ReachTop</title>
+		<link rel="stylesheet" type="text/css" href="css/login.css">
+		<script type="text/javascript" src="js/jquery/jquery-2.1.4.min.js"></script>
+	</head>
+	<body>
+		<div class="login-content">
+			<form action="index.html" method="post" name="login">
+				<label for="username">用户名：</label><input type="text" name="username" id="username" class="username" required><br>
+				<label for="upassword">密&nbsp;码：</label><input type="password" name="upassword" id="upassword" class="upassword" required><br>
+				<a href="javascript:void(0);" class="prompt-pass">忘记密码？</a><br>
+				<input type="submit" name="login" class="login" value="登录">
+			</form>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('.prompt-pass').click(function (){
+				alert("如果你忘记了密码，请与你的指导老师联系来重置密码。");
+			})
+		})
+	</script>
+</html>

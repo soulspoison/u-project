@@ -1,0 +1,77 @@
+<!--
+	作者：Perfly
+	时间：2017-10-24
+	描述：
+-->	
+<!DOCTYPE html>
+<html style="height: 100%">
+	<head>
+		<meta charset="utf-8">
+		<title>ReachTop</title>
+		<link rel="stylesheet" type="text/css" href="../css/index.css">
+      <link rel="stylesheet" type="text/css" href="../css/list.css">
+		<script type="text/javascript" src="../js/jquery/jquery-2.1.4.min.js"></script>
+	</head>
+    <body style="height: 100%; margin: 0">
+   		<header>
+   			<div>
+   				<span>睿途</span>
+   				<a href="../index.html">首页</a>
+			</div>
+   			<div>
+   				<span class="message">消息</span>
+   				<span class="user">用户</span>	
+   			</div>
+   		</header>
+   		<article class="article">
+   			<ul>
+   				<li><a href="../user.html">个人中心</a></li>
+   				<li><a href="../login.html">退出登录</a></li>
+   			</ul>
+   		</article>
+         <div id="content-list">
+            <div id="content-header">
+               <div id="content-title">
+                  测试题目
+               </div>
+               <div id="content-date">
+                  2017/10/20
+               </div>
+            </div>
+            <div id="content-main">
+               测试文章：“鸣春谷”想必大家都去过，可我是第一次去，但我在那里体会到了无与伦比的乐趣。如果你想知道事情的经过，就一起跟我去一探究竟吧!<br>
+　　走过了千尺蹬，穿过了山顶广场，就来到了鸣春谷。早已因登山筋疲力尽的我们顿时心情高涨，顾不上体力的透支，一蹦一跳，迫不及待的就冲了进去，想快点睹目众鸟的风采。没想到为时过早，工作人员还在清扫场地。过了一会儿，清洁工作结束了，大门也缓缓打开了。我们每人都买了一盒小巧的饲料，倒在手上，等待小鸟的光临。在大致了解他们的习惯后，我逐渐喜欢上了虎皮鹦鹉。因为它们色彩斑斓;啄食的时候，它那浅黄的小嘴在你的手上一粒一粒的啄，让你异常舒服。<br>
+　　有喜欢的鸟，自然就有讨厌的鸟：有一种通体金黄的小鸟，它常常欺负别的小鸟，跟它们抢食，可它又从不肯站在你的手上。另一种白色的鸟啄食时则会夹到你肉，很不舒服。<br>
+　　喂完了活泼机灵的小鸟，又观赏了鹦鹉表演，喂过华贵的孔雀后，我们才依依不舍的离开了。<br>
+　　鸣春谷，让我记忆犹新，流连忘返，再一次感受到了春天。
+            </div>
+         </div>
+         <!--评论区，日记有评论，面谈记录和预约面谈记录无评论-->
+         <div id="content-comment">
+            <div id="comment-main">
+               测试评论：“鸣春谷”想必大家都去过，可我是第一次去，但我在那里体会到了无与伦比的乐趣。如果你想知道事情的经过，就一起跟我去一探究竟吧!
+            </div>
+            <div id="content-msg">
+               <div id="content-user">
+                  测试管理老师
+               </div>
+               <div id="content-date">
+                  2017/10/21               
+               </div>
+            </div>
+         </div>
+         <script type="text/javascript">
+            $(document).ready(function() {
+               $('.user').mouseenter(function() {
+                  $('.article').stop(false, true).slideDown(300);
+               })
+               $('.article').mouseleave(function() {
+                  $('.article').stop(false, true).delay(500).slideUp(300);
+               })
+               $('.message').click(function() {
+                  window.location.href = '../message.html';
+               })
+            })
+         </script>
+   </body>
+</html>

@@ -21,6 +21,8 @@ User.add({
 		options: [{ value: 'male', label: '男' }, { value: 'female', label: '女' }],
 		default: 'male',
 	},
+}, 'Permissions', {
+	isAdmin: { type: Boolean, label: 'Can access Keystone', index: true },
 });
 
 // Provide access to Keystone
@@ -32,5 +34,5 @@ User.relationship({ path: 'angel', ref: 'Angel', refPath: 'owner' });
 /**
  * Registration
  */
-User.defaultColumns = 'name, email, phoneNumber';
+User.defaultColumns = 'name, email, isAdmin';
 User.register();

@@ -1,0 +1,34 @@
+{
+  "pages":[
+    "pages/list/index",
+    "pages/user/index",
+    "pages/record/index",
+    "pages/logs/logs",
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#e7e7e7",
+    "navigationBarTitleText": "读英文诗",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "backgroundColor": "#f3e5c0",
+    "color": "#48484c",
+    "selectedColor": "#48484c",
+    "list": [
+      {
+        "iconPath": "./images/letter.png",
+        "selectedIconPath": "./images/letter-1.png",
+        "pagePath": "pages/list/index",
+        "text": "读信"
+      },
+      {
+        "iconPath": "./images/user.png",
+        "selectedIconPath": "./images/user-1.png",
+        "pagePath": "pages/user/index",
+        "text": "个人"
+      }
+    ]
+  }
+}

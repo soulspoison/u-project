@@ -1,0 +1,8 @@
+{
+	"client": "./client",
+	"svr": "./server",
+	"miniprogramRoot": "./client",
+	"qcloudRoot": "./server",
+	"appid": "wx39e6a1b9e7f4c4f3",
+	"projectname": "reachtop-wx"
+}
